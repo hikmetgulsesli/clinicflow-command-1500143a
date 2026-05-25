@@ -1,0 +1,56 @@
+[
+  {
+    "screenId": "9b507a993d16472ebe91bfeb247425e5",
+    "name": "Insights - ClinicFlow Command",
+    "type": "app-screen",
+    "description": "Insights - ClinicFlow Command screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "e6a1668d26de47bd96135042dd850c2b",
+    "name": "Queue and Status Management - ClinicFlow Command",
+    "type": "app-screen",
+    "description": "Queue and Status Management - ClinicFlow Command screen",
+    "surfaceIds": [
+      "SURF_QUEUE_AND_STATUS_MANAGEMENT"
+    ]
+  },
+  {
+    "screenId": "03232aeab91d44548714ed9c13e7ff49",
+    "name": "Settings and Preferences - ClinicFlow Command",
+    "type": "settings",
+    "description": "Settings and Preferences - ClinicFlow Command screen",
+    "surfaceIds": [
+      "SURF_SETTINGS_AND_PREFERENCES"
+    ]
+  },
+  {
+    "screenId": "25b859a82d7e4be5b03cd0b201b161b2",
+    "name": "Patient Editor - ClinicFlow Command",
+    "type": "form",
+    "description": "Patient Editor - ClinicFlow Command screen",
+    "surfaceIds": [
+      "SURF_PATIENT_EDITOR"
+    ]
+  },
+  {
+    "screenId": "975a3ae4e5694d8daa52d43c51748413",
+    "name": "Patient Operations - ClinicFlow Command",
+    "type": "app-screen",
+    "description": "Patient Operations - ClinicFlow Command screen",
+    "surfaceIds": [
+      "SURF_PATIENT_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "56b1a25c720e4709ab390eeb1c086283",
+    "name": "Empty and Error Recovery - ClinicFlow Command",
+    "type": "error",
+    "description": "Empty and Error Recovery - ClinicFlow Command screen",
+    "surfaceIds": [
+      "SURF_EMPTY_AND_ERROR_RECOVERY"
+    ]
+  }
+]

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings and Preferences - ClinicFlow Command</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#f0f1f2", "surface-bright": "#f8f9fa", "surface-container": "#edeeef", "on-tertiary-fixed": "#291802", "surface-container-highest": "#e1e3e4", "secondary": "#006a63", "on-surface": "#191c1d", "primary-fixed": "#d1e4fb", "inverse-surface": "#2e3132", "surface-dim": "#d9dadb", "on-primary-container": "#96a9be", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#00504a", "secondary-fixed-dim": "#71d7cd", "on-background": "#191c1d", "tertiary": "#362308", "on-secondary": "#ffffff", "secondary-fixed": "#8ef4e9", "on-primary-fixed-variant": "#36485b", "on-primary-fixed": "#091d2e", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#b5c8df", "primary-container": "#2c3e50", "surface-container-high": "#e7e8e9", "tertiary-container": "#4e381c", "outline": "#74777d", "surface-tint": "#4e6073", "secondary-container": "#8bf1e6", "surface-variant": "#e1e3e4", "tertiary-fixed-dim": "#e3c19b", "outline-variant": "#c4c6cd", "on-error": "#ffffff", "on-secondary-container": "#006f67", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#5a4225", "background": "#f8f9fa", "primary": "#162839", "inverse-primary": "#b5c8df", "on-surface-variant": "#43474c", "on-error-container": "#93000a", "on-tertiary-container": "#c1a17d", "on-secondary-fixed": "#00201d", "error": "#ba1a1a", "surface-container-low": "#f3f4f5", "surface": "#f8f9fa", "tertiary-fixed": "#ffddb7"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"
+                    },
+                    spacing: {
+                        "container-padding": "20px", "gutter": "12px", "table-cell-padding": "8px 12px", "margin": "16px", "unit": "4px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-fill { font-variation-settings: 'FILL' 1; }
+        
+        /* Custom Toggle Switch Styles */
+        .toggle-checkbox:checked { right: 0; border-color: #006a63; }
+        .toggle-checkbox:checked + .toggle-label { background-color: #006a63; }
+        .toggle-checkbox:checked + .toggle-label:after { transform: translateX(100%); border-color: white; }
+        .toggle-label:after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; background-color: white; border-radius: 50%; transition: transform 0.2s; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-hidden">
+<!-- SideNavBar -->
+<nav class="fixed h-full w-[240px] left-0 top-0 bg-primary dark:bg-primary text-on-primary dark:text-on-primary border-r border-outline-variant flex flex-col h-full py-4 font-body-md text-body-md z-20">
+<div class="px-margin mb-8 flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed">ecg_heart</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary leading-tight">ClinicFlow Command</h1>
+<p class="font-label-sm text-label-sm text-on-primary-container">Medical Operations</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-1 px-3">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors Active: opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span>Operations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors Active: opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span>Editor</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors Active: opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">queue</span>
+<span>Queue</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors Active: opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span>Insights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary font-bold bg-primary-container/20 hover:bg-primary-container/10 transition-colors Active: opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px] icon-fill">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<div class="px-3 flex flex-col gap-1 mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span>Help</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</nav>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 h-[56px] w-[calc(100%-240px)] bg-surface dark:bg-surface text-on-surface dark:text-on-surface border-b border-outline-variant flex items-center justify-between px-gutter ml-[240px] font-label-md text-label-md z-10 transition-all duration-200">
+<div class="flex items-center gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">ClinicFlow Command</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-[32px] h-[32px] flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="w-[32px] h-[32px] flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-[6px] right-[6px] w-[8px] h-[8px] bg-error rounded-full border border-surface"></span>
+</button>
+<div class="w-[32px] h-[32px] rounded-full bg-primary-container text-on-primary-container flex items-center justify-center border border-outline-variant ml-2 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a female medical administrator in her late 30s. She is wearing minimal, modern attire suitable for a clinical command center. The lighting is soft and even, highlighting a serious but approachable expression. The background is a neutral, out-of-focus high-tech clinical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLmNf3m2b7Ivs6kHUuhpwzKzeelcyGmcTA4PXM-EyXYN4MgzvXHM2ORoJ1sRA1geDiMZVgSUGD2M50zArmjHMaAdf3hpnOsq4pCCBLbDknEA8w7jtSnPn03yFFflWjkeh2ZXucyRb-APf4MKyAV1QiDc5bWXx4Q17tP_HYY-q3_UwxOM5RE770iU3kvWaLK5PCOc-CCjkxtxTgq6qUJ8pccOH9QrkdBV1mvBLyOZWm8IUMhI-EQ3yzFq4803k31ggJIyOAFpmxkrM"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[240px] mt-[56px] h-[calc(100vh-56px)] overflow-y-auto bg-surface-bright p-container-padding flex justify-center">
+<div class="w-full max-w-[800px] flex flex-col gap-margin pb-10">
+<!-- Page Header -->
+<div class="flex items-end justify-between border-b border-outline-variant pb-3 mb-2">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Settings &amp; Preferences</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Manage your workspace configuration and data views.</p>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+                    Reset to Defaults
+                </button>
+</div>
+<!-- Group: Workspace & Views -->
+<section class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col">
+<div class="px-margin py-3 border-b border-outline-variant bg-surface-container-low">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">tv_options_parental</span>
+                        Workspace Display
+                    </h3>
+</div>
+<div class="p-margin flex flex-col gap-6">
+<!-- Default Views (Radio) -->
+<div>
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-3">Default Landing Screen</h4>
+<div class="flex items-center gap-6">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="w-4 h-4 text-secondary bg-surface border-outline focus:ring-secondary focus:ring-1" name="default_view" type="radio" value="operations"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Operations Dashboard</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 text-secondary bg-surface border-outline focus:ring-secondary focus:ring-1" name="default_view" type="radio" value="queue"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Patient Queue</span>
+</label>
+</div>
+</div>
+<!-- Density Mode (Toggle) -->
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/50">
+<div>
+<h4 class="font-body-md text-body-md text-on-surface font-medium">High Density Mode</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reduces row height and padding in data tables to display more records.</p>
+</div>
+<div class="relative inline-block w-10 h-5 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-2 border-outline appearance-none cursor-pointer z-10 transition-colors" id="toggle_density" name="toggle_density" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-outline cursor-pointer transition-colors" for="toggle_density"></label>
+</div>
+</div>
+<!-- Auto-refresh (Toggle) -->
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/50">
+<div>
+<h4 class="font-body-md text-body-md text-on-surface font-medium">Auto-refresh Data (30s)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automatically polling for new patient entries and status updates.</p>
+</div>
+<div class="relative inline-block w-10 h-5 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-2 border-outline appearance-none cursor-pointer z-10 transition-colors" id="toggle_refresh" name="toggle_refresh" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-outline cursor-pointer transition-colors" for="toggle_refresh"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Group: Data Filters -->
+<section class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col">
+<div class="px-margin py-3 border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">filter_list</span>
+                        Saved Filters
+                    </h3>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between px-margin py-[10px] border-b border-outline-variant/50 hover:bg-surface-container-low transition-colors group">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">My Triage Queue</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Status: Waiting | Dept: Emergency</span>
+</div>
+<button class="w-[28px] h-[28px] flex items-center justify-center rounded text-on-surface-variant opacity-0 group-hover:opacity-100 hover:text-error hover:bg-error-container transition-all" title="Delete Filter">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-margin py-[10px] border-b border-outline-variant/50 hover:bg-surface-container-low transition-colors group">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">High Priority Patients</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acuity: Level 1, Level 2</span>
+</div>
+<button class="w-[28px] h-[28px] flex items-center justify-center rounded text-on-surface-variant opacity-0 group-hover:opacity-100 hover:text-error hover:bg-error-container transition-all" title="Delete Filter">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-margin py-[10px] hover:bg-surface-container-low transition-colors group">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Cardiology Consults</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dept: Cardiology | Status: Pending</span>
+</div>
+<button class="w-[28px] h-[28px] flex items-center justify-center rounded text-on-surface-variant opacity-0 group-hover:opacity-100 hover:text-error hover:bg-error-container transition-all" title="Delete Filter">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Group: Notifications -->
+<section class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col">
+<div class="px-margin py-3 border-b border-outline-variant bg-surface-container-low">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">notifications_active</span>
+                        Alerts &amp; Notifications
+                    </h3>
+</div>
+<div class="p-margin flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-body-md text-body-md text-on-surface font-medium">SLA Breach Notifications</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Receive alerts when a patient wait time exceeds departmental SLA thresholds.</p>
+</div>
+<div class="relative inline-block w-10 h-5 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-2 border-outline appearance-none cursor-pointer z-10 transition-colors" id="toggle_sla" name="toggle_sla" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-outline cursor-pointer transition-colors" for="toggle_sla"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Bar -->
+<div class="flex items-center justify-end gap-3 mt-4 pt-4 border-t border-outline-variant">
+<button class="px-4 py-2 rounded font-label-md text-label-md border border-outline-variant text-on-surface bg-surface hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+                    Retry Load
+                </button>
+<button class="px-4 py-2 rounded font-label-md text-label-md bg-primary text-on-primary hover:bg-primary/90 transition-colors shadow-sm flex items-center gap-2" id="savePreferencesBtn">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                    Save Preferences
+                </button>
+</div>
+</div>
+</main>
+<!-- Toast Notification (Hidden by default, triggered by JS) -->
+<div class="fixed bottom-[24px] right-[24px] bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded border border-outline shadow-md flex items-center gap-3 transform translate-y-[150%] opacity-0 transition-all duration-300 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-body-sm text-body-sm">Preferences saved successfully.</span>
+</div>
+<script>
+        // Simple JS to handle the Save Preferences button and Toast
+        document.getElementById('savePreferencesBtn').addEventListener('click', function() {
+            const btn = this;
+            const originalContent = btn.innerHTML;
+            
+            // Loading state
+            btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Saving...';
+            btn.disabled = true;
+            btn.classList.add('opacity-80');
+
+            // Simulate API call delay
+            setTimeout(() => {
+                // Restore button
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+                btn.classList.remove('opacity-80');
+
+                // Show toast
+                const toast = document.getElementById('toastNotification');
+                toast.classList.remove('translate-y-[150%]', 'opacity-0');
+                
+                // Hide toast after 3 seconds
+                setTimeout(() => {
+                    toast.classList.add('translate-y-[150%]', 'opacity-0');
+                }, 3000);
+            }, 600);
+        });
+    </script>
+</body></html>

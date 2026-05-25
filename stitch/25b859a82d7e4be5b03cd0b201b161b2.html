@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Patient Editor - ClinicFlow Command</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed": "#291802",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary": "#006a63",
+                        "on-surface": "#191c1d",
+                        "primary-fixed": "#d1e4fb",
+                        "inverse-surface": "#2e3132",
+                        "surface-dim": "#d9dadb",
+                        "on-primary-container": "#96a9be",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "secondary-fixed-dim": "#71d7cd",
+                        "on-background": "#191c1d",
+                        "tertiary": "#362308",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#8ef4e9",
+                        "on-primary-fixed-variant": "#36485b",
+                        "on-primary-fixed": "#091d2e",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#b5c8df",
+                        "primary-container": "#2c3e50",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-container": "#4e381c",
+                        "outline": "#74777d",
+                        "surface-tint": "#4e6073",
+                        "secondary-container": "#8bf1e6",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed-dim": "#e3c19b",
+                        "outline-variant": "#c4c6cd",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#006f67",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5a4225",
+                        "background": "#f8f9fa",
+                        "primary": "#162839",
+                        "inverse-primary": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c1a17d",
+                        "on-secondary-fixed": "#00201d",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed": "#ffddb7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding": "20px",
+                        "gutter": "12px",
+                        "table-cell-padding": "8px 12px",
+                        "margin": "16px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex font-body-md">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed h-full w-[240px] left-0 top-0 bg-primary dark:bg-primary text-on-primary dark:text-on-primary border-r border-outline-variant flex flex-col py-4 z-50 hidden md:flex">
+<!-- Header -->
+<div class="px-container-padding mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary">ClinicFlow Command</h1>
+<p class="font-label-sm text-label-sm text-on-primary-container">Medical Operations</p>
+</div>
+</div>
+</div>
+<!-- Main Tabs -->
+<ul class="flex-1 space-y-1 px-3">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Operations</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary font-bold bg-primary-container/20 opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-body-md text-body-md">Editor</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="queue">queue</span>
+<span class="font-body-md text-body-md">Queue</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body-md text-body-md">Insights</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</li>
+</ul>
+<!-- Footer Tabs -->
+<ul class="space-y-1 px-3 mt-auto pt-4 border-t border-primary-container">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-body-md text-body-md">Help</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 h-[56px] w-full md:w-[calc(100%-240px)] bg-surface dark:bg-surface text-on-surface dark:text-on-surface border-b border-outline-variant flex items-center justify-between px-gutter md:ml-[240px] z-40 transition-all duration-200">
+<div class="flex items-center gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-primary md:hidden">ClinicFlow Command</span>
+<!-- Contextual Breadcrumb for Editor -->
+<div class="hidden md:flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">folder_open</span>
+<span class="font-label-md text-label-md">Records</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary">Patient Editor</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-8 pr-4 py-1.5 bg-surface-container-low border border-outline-variant rounded text-body-sm font-body-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary w-48" placeholder="Quick search..." type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border border-surface"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container border border-outline-variant overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIVfN0vemgKV_cbplyFQ6UBTv5ipUiKIGYVamco_3B_8WS8foDX59p34yhlCGPc_Jqo1dthoPrtaeN1qrCCjFj0zjK4WkQmxdr1gV36qJ7kULSsW5JvYVwozOvh4TDYzVMxpFbqtetICEUYyh8g2I26GOeA5q-6DjL1OJakXyp5UdldvRHx9_qjij1shVPrqJP9WKCFRXFdujeWdhmddWPDF20FKD-353rQxO0_id_Zd8ZSqwUxcBqrCGWpaBqMt6hlXsWpxO7W_o"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full pt-[56px] md:pl-[240px] bg-background overflow-y-auto">
+<div class="p-container-padding max-w-4xl mx-auto">
+<!-- Editor Header & State Feedback -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-margin gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Patient Editor</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit">Create or modify a clinical patient record.</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">sync_problem</span>
+                    Unsaved Changes
+                </div>
+</div>
+<!-- Form Container -->
+<form class="space-y-margin">
+<!-- Section 1: Personal Information -->
+<div class="bg-surface border border-outline-variant rounded-lg p-margin shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-2 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                        Personal Information
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-unit">
+                                Full Legal Name <span class="text-error">*</span>
+</label>
+<input class="w-full px-3 py-2 bg-surface border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" placeholder="Last, First Middle" type="text" value="Jane Doe"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit">
+                                Date of Birth <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full pl-3 pr-10 py-2 bg-surface border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors appearance-none" type="date" value="1985-04-12"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">calendar_month</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit">
+                                Biological Gender <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full pl-3 pr-10 py-2 bg-surface border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors appearance-none">
+<option value="">Select...</option>
+<option value="M">Male</option>
+<option selected="" value="F">Female</option>
+<option value="O">Other/Undisclosed</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Intake Details (Focus state demonstrated here with Error) -->
+<div class="bg-surface border border-outline-variant rounded-lg p-margin shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-2 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">clinical_notes</span>
+                        Intake Details
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-error mb-unit">
+                                Reason for Visit <span class="text-error">*</span>
+</label>
+<textarea class="w-full px-3 py-2 bg-error-container/10 border-2 border-error rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-error focus:ring-1 focus:ring-error transition-colors resize-none" placeholder="Primary complaint or objective..." rows="3"></textarea>
+<p class="font-body-sm text-body-sm text-error mt-unit flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                                This field is required to proceed with intake.
+                            </p>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit">
+                                Priority Level
+                            </label>
+<div class="relative">
+<select class="w-full pl-3 pr-10 py-2 bg-surface border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors appearance-none">
+<option selected="" value="routine">Routine (Low)</option>
+<option value="urgent">Urgent (Medium)</option>
+<option value="stat">STAT (High)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+<div class="mt-4 p-3 bg-surface-container-low border border-outline-variant rounded flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Priority dictates queue placement. Ensure clinical justification for STAT.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Contact Information -->
+<div class="bg-surface border border-outline-variant rounded-lg p-margin shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-2 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">contact_phone</span>
+                        Contact Information
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit">
+                                Primary Phone
+                            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">call</span>
+<input class="w-full pl-10 pr-3 py-2 bg-surface border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" placeholder="(XXX) XXX-XXXX" type="tel" value="(555) 123-4567"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit">
+                                Email Address
+                            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">mail</span>
+<input class="w-full pl-10 pr-3 py-2 bg-surface border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" placeholder="patient@domain.com" type="email" value="jane.doe@example.com"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex items-center justify-end gap-3 pt-4 border-t border-outline-variant">
+<button class="px-4 py-2 border border-outline-variant rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-outline" id="ACT_CANCEL_EDIT" type="button">
+                        Cancel
+                    </button>
+<button class="px-6 py-2 bg-primary text-on-primary rounded font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 flex items-center gap-2" id="ACT_SAVE_RECORD" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                        Save Patient
+                    </button>
+</div>
+</form>
+</div>
+</main>
+</body></html>

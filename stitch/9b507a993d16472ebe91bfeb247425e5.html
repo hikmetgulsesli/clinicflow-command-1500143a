@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClinicFlow Command - Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed": "#291802",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary": "#006a63",
+                        "on-surface": "#191c1d",
+                        "primary-fixed": "#d1e4fb",
+                        "inverse-surface": "#2e3132",
+                        "surface-dim": "#d9dadb",
+                        "on-primary-container": "#96a9be",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "secondary-fixed-dim": "#71d7cd",
+                        "on-background": "#191c1d",
+                        "tertiary": "#362308",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#8ef4e9",
+                        "on-primary-fixed-variant": "#36485b",
+                        "on-primary-fixed": "#091d2e",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#b5c8df",
+                        "primary-container": "#2c3e50",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-container": "#4e381c",
+                        "outline": "#74777d",
+                        "surface-tint": "#4e6073",
+                        "secondary-container": "#8bf1e6",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed-dim": "#e3c19b",
+                        "outline-variant": "#c4c6cd",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#006f67",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5a4225",
+                        "background": "#f8f9fa",
+                        "primary": "#162839",
+                        "inverse-primary": "#b5c8df",
+                        "on-surface-variant": "#43474c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c1a17d",
+                        "on-secondary-fixed": "#00201d",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed": "#ffddb7"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-padding": "20px",
+                        "gutter": "12px",
+                        "table-cell-padding": "8px 12px",
+                        "margin": "16px",
+                        "unit": "4px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- SideNavBar -->
+<nav class="fixed h-full w-[240px] left-0 top-0 bg-primary border-r border-outline-variant flex flex-col py-4 z-20">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary">ClinicFlow Command</h1>
+<p class="font-label-sm text-label-sm text-on-primary-container">Medical Operations</p>
+</div>
+</div>
+<div class="flex-1 px-3 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-md text-label-md">Operations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span class="font-label-md text-label-md">Editor</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">queue</span>
+<span class="font-label-md text-label-md">Queue</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary font-bold bg-primary-container/20 opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-md text-label-md">Insights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<div class="px-3 mt-auto space-y-1 pt-4 border-t border-outline-variant/20">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="font-label-md text-label-md">Help</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-primary-container/70 hover:bg-primary-container/10 transition-colors opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 h-[56px] w-[calc(100%-240px)] bg-surface border-b border-outline-variant flex items-center justify-between px-gutter ml-[240px] z-10 transition-all duration-200">
+<div class="flex items-center gap-4 w-1/3">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-8 pl-10 pr-3 rounded bg-surface-container-low border-none text-body-sm font-body-sm focus:ring-1 focus:ring-secondary focus:bg-surface-container-lowest transition-colors placeholder:text-on-surface-variant/70" placeholder="Search operations..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-primary transition-all duration-200 relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span>
+</button>
+<div class="w-px h-6 bg-outline-variant mx-2"></div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-primary-fixed font-bold">JD</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[240px] pt-[56px] p-container-padding">
+<!-- Page Header -->
+<div class="flex items-center justify-between mb-margin">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Insights Overview</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Real-time clinic performance metrics</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-9 px-3 border border-outline-variant rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span class="font-label-md text-label-md">Filter</span>
+</button>
+<button class="h-9 px-4 rounded bg-primary text-on-primary hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="font-label-md text-label-md">Export Summary</span>
+</button>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-4 gap-gutter mb-margin">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-4">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Average Wait Time</span>
+<span class="material-symbols-outlined text-[20px] text-error">trending_up</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">42<span class="text-[16px] text-on-surface-variant ml-0.5">m</span></span>
+</div>
+<p class="font-label-sm text-label-sm text-error mt-1">+5m vs yesterday</p>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-4">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Patient Volume</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">groups</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">124</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Today's total</p>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-4">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Room Turnover</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">update</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">15<span class="text-[16px] text-on-surface-variant ml-0.5">m</span></span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-1">-2m vs average</p>
+</div>
+<!-- Metric Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-4">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Satisfaction Score</span>
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 5</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Based on 82 surveys</p>
+</div>
+</div>
+<!-- Middle Section: Chart & Hint -->
+<div class="grid grid-cols-12 gap-gutter mb-margin">
+<!-- State Distribution -->
+<div class="col-span-8 bg-surface-container-lowest border border-outline-variant rounded flex flex-col">
+<div class="px-4 py-3 border-b border-outline-variant">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Patient State Distribution</h3>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center">
+<div class="flex items-center justify-between mb-2">
+<div class="flex gap-4">
+<div class="flex items-center gap-1.5">
+<div class="w-3 h-3 rounded-sm bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Triage (45%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-3 h-3 rounded-sm bg-primary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Roomed (55%)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total: 84 Active</span>
+</div>
+<!-- Simple Bar Chart Mock -->
+<div class="w-full h-8 rounded overflow-hidden flex shadow-sm border border-outline-variant">
+<div class="h-full bg-secondary" style="width: 45%;"></div>
+<div class="h-full bg-primary" style="width: 55%;"></div>
+</div>
+</div>
+</div>
+<!-- Actionable Hint -->
+<div class="col-span-4 bg-secondary-fixed/20 border border-secondary/30 rounded p-4 flex flex-col">
+<div class="flex items-center gap-2 mb-3 text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<h3 class="font-headline-sm text-headline-sm">Actionable Hint</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-4 flex-1">
+                    Volume is <strong class="font-semibold text-error">20% higher</strong> than average for this time period.
+                </p>
+<div class="mt-auto">
+<button class="w-full h-8 bg-surface-container-lowest border border-outline-variant rounded font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
+                        Consider opening Triage Lane 3
+                    </button>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Recent Activity -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded">
+<div class="px-4 py-3 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Activity Feed</h3>
+<button class="text-secondary font-label-md text-label-md hover:underline">View All</button>
+</div>
+<div class="flex flex-col">
+<!-- Activity Item 1 -->
+<div class="flex items-center gap-4 px-4 py-3 border-b border-outline-variant/50 hover:bg-surface-container-low/50 transition-colors h-[40px] box-content">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">check</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-on-surface">Provider Handoff complete for <span class="font-medium text-primary">Rm 4</span></p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2m ago</span>
+</div>
+</div>
+<!-- Activity Item 2 (Error State) -->
+<div class="flex items-center gap-4 px-4 py-3 border-b border-outline-variant/50 bg-error-container/10 hover:bg-error-container/20 transition-colors h-[40px] box-content">
+<div class="w-6 h-6 rounded-full bg-error-container flex items-center justify-center flex-shrink-0 border border-error/20">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-error">SLA Breach: Patient 882 waiting &gt;60m</p>
+<span class="font-label-sm text-label-sm text-error/80">5m ago</span>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex items-center gap-4 px-4 py-3 border-b border-outline-variant/50 hover:bg-surface-container-low/50 transition-colors h-[40px] box-content">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">login</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-on-surface">Patient 890 Checked in to <span class="font-medium text-primary">Triage</span></p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12m ago</span>
+</div>
+</div>
+<!-- Activity Item 4 -->
+<div class="flex items-center gap-4 px-4 py-3 hover:bg-surface-container-low/50 transition-colors h-[40px] box-content">
+<div class="w-6 h-6 rounded-full bg-secondary-container/50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container">cleaning_services</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-on-surface">Room 2 Status changed to <span class="font-medium text-secondary">Clean &amp; Ready</span></p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">15m ago</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

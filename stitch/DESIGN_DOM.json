@@ -1,0 +1,3525 @@
+{
+  "generatedAt": "2026-05-25T17:11:40.901Z",
+  "screenCount": 6,
+  "screens": {
+    "03232aeab91d44548714ed9c13e7ff49": {
+      "screenId": "03232aeab91d44548714ed9c13e7ff49",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "fixed",
+            "h-full",
+            "w-[240px]",
+            "left-0",
+            "top-0",
+            "bg-primary",
+            "dark:bg-primary",
+            "text-on-primary",
+            "dark:text-on-primary",
+            "border-r"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "absolute",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "h-[56px]",
+            "w-[calc(100%-240px)]",
+            "bg-surface",
+            "dark:bg-surface",
+            "text-on-surface",
+            "dark:text-on-surface",
+            "border-b"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "ml-[240px]",
+            "mt-[56px]",
+            "h-[calc(100vh-56px)]",
+            "overflow-y-auto",
+            "bg-surface-bright",
+            "p-container-padding",
+            "flex",
+            "justify-center"
+          ],
+          "childCount": 30
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "search",
+          "classes": [
+            "w-[32px]",
+            "h-[32px]",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "search",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/search",
+          "expectedRoute": "/search",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "w-[32px]",
+            "h-[32px]",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Reset to Defaults",
+          "classes": [
+            "font-label-md",
+            "text-label-md",
+            "text-secondary",
+            "hover:underline",
+            "flex",
+            "items-center",
+            "gap-1"
+          ],
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Delete Filter",
+          "classes": [
+            "w-[28px]",
+            "h-[28px]",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded",
+            "text-on-surface-variant",
+            "opacity-0",
+            "group-hover:opacity-100",
+            "hover:text-error",
+            "hover:bg-error-container",
+            "transition-all"
+          ],
+          "icon": "delete",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "classes": [
+            "px-4",
+            "py-2",
+            "rounded",
+            "font-label-md",
+            "text-label-md",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "bg-surface",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "sync",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Preferences",
+          "classes": [
+            "px-4",
+            "py-2",
+            "rounded",
+            "font-label-md",
+            "text-label-md",
+            "bg-primary",
+            "text-on-primary",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "shadow-sm",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "ecg_heart",
+          "classes": [],
+          "icon": "ecg_heart",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "radio",
+          "label": "default_view",
+          "placeholder": "",
+          "name": "default_view",
+          "classes": [
+            "w-4",
+            "h-4",
+            "text-secondary",
+            "bg-surface",
+            "border-outline",
+            "focus:ring-secondary",
+            "focus:ring-1"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "toggle_density",
+          "placeholder": "",
+          "name": "toggle_density",
+          "classes": [
+            "toggle-checkbox",
+            "absolute",
+            "block",
+            "w-5",
+            "h-5",
+            "rounded-full",
+            "bg-white",
+            "border-2",
+            "border-outline",
+            "appearance-none",
+            "cursor-pointer",
+            "z-10",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "toggle_refresh",
+          "placeholder": "",
+          "name": "toggle_refresh",
+          "classes": [
+            "toggle-checkbox",
+            "absolute",
+            "block",
+            "w-5",
+            "h-5",
+            "rounded-full",
+            "bg-white",
+            "border-2",
+            "border-outline",
+            "appearance-none",
+            "cursor-pointer",
+            "z-10",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "toggle_sla",
+          "placeholder": "",
+          "name": "toggle_sla",
+          "classes": [
+            "toggle-checkbox",
+            "absolute",
+            "block",
+            "w-5",
+            "h-5",
+            "rounded-full",
+            "bg-white",
+            "border-2",
+            "border-outline",
+            "appearance-none",
+            "cursor-pointer",
+            "z-10",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "queue",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]",
+            "icon-fill"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "ecg_heart",
+        "dashboard",
+        "edit_note",
+        "queue",
+        "analytics",
+        "settings",
+        "help",
+        "logout",
+        "search",
+        "notifications",
+        "restart_alt",
+        "tv_options_parental",
+        "filter_list",
+        "delete",
+        "notifications_active",
+        "sync",
+        "save",
+        "check_circle",
+        "progress_activity"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBLmNf3m2b7Ivs6kHUuhpwzKzeelcyGmcTA4PXM-EyXYN4MgzvXHM2ORoJ1sRA1geDiMZVgSUGD2M50zArmjHMaAdf3hpnOsq4pCCBLbDknEA8w7jtSnPn03yFFflWjkeh2ZXucyRb-APf4MKyAV1",
+          "alt": "User Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f0f1f2",
+        "surface-bright": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "on-tertiary-fixed": "#291802",
+        "surface-container-highest": "#e1e3e4",
+        "secondary": "#006a63",
+        "on-surface": "#191c1d",
+        "primary-fixed": "#d1e4fb",
+        "inverse-surface": "#2e3132",
+        "surface-dim": "#d9dadb",
+        "on-primary-container": "#96a9be",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#00504a",
+        "secondary-fixed-dim": "#71d7cd",
+        "on-background": "#191c1d",
+        "tertiary": "#362308",
+        "on-secondary": "#ffffff",
+        "secondary-fixed": "#8ef4e9",
+        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed": "#091d2e",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#b5c8df",
+        "primary-container": "#2c3e50",
+        "surface-container-high": "#e7e8e9",
+        "tertiary-container": "#4e381c",
+        "outline": "#74777d",
+        "surface-tint": "#4e6073",
+        "secondary-container": "#8bf1e6",
+        "surface-variant": "#e1e3e4",
+        "tertiary-fixed-dim": "#e3c19b",
+        "outline-variant": "#c4c6cd",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#006f67",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "background": "#f8f9fa",
+        "primary": "#162839",
+        "inverse-primary": "#b5c8df",
+        "on-surface-variant": "#43474c",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#c1a17d",
+        "on-secondary-fixed": "#00201d",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f4f5",
+        "surface": "#f8f9fa",
+        "tertiary-fixed": "#ffddb7",
+        "priority-critical": "#ba1a1a",
+        "priority-high": "#e3c19b",
+        "priority-normal": "#71d7cd"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "search",
+          "icon": "search",
+          "action": "navigate",
+          "route": "/search",
+          "expectedBehavior": "navigate:/search"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Reset to Defaults",
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Delete Filter",
+          "icon": "delete",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "icon": "sync",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Preferences",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "ecg_heart",
+          "icon": "ecg_heart",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "default_view",
+          "type": "radio",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "toggle_density",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "toggle_refresh",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "toggle_sla",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ecg_heart",
+          "icon": "ecg_heart",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Settings and Preferences - ClinicFlow Command"
+    },
+    "25b859a82d7e4be5b03cd0b201b161b2": {
+      "screenId": "25b859a82d7e4be5b03cd0b201b161b2",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "fixed",
+            "h-full",
+            "w-[240px]",
+            "left-0",
+            "top-0",
+            "bg-primary",
+            "dark:bg-primary",
+            "text-on-primary",
+            "dark:text-on-primary",
+            "border-r"
+          ],
+          "childCount": 11
+        },
+        {
+          "tag": "header",
+          "layout": "absolute",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "h-[56px]",
+            "w-full",
+            "md:w-[calc(100%-240px)]",
+            "bg-surface",
+            "dark:bg-surface",
+            "text-on-surface",
+            "dark:text-on-surface"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "w-full",
+            "pt-[56px]",
+            "md:pl-[240px]",
+            "bg-background",
+            "overflow-y-auto"
+          ],
+          "childCount": 24
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "hover:bg-surface-container",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "classes": [
+            "px-4",
+            "py-2",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-surface-container",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-outline"
+          ],
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Patient",
+          "classes": [
+            "px-6",
+            "py-2",
+            "bg-primary",
+            "text-on-primary",
+            "rounded",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-primary-container",
+            "hover:text-on-primary-container",
+            "transition-colors",
+            "shadow-sm",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "local_hospital",
+          "classes": [],
+          "icon": "local_hospital",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Quick search...",
+          "placeholder": "Quick search...",
+          "name": "",
+          "classes": [
+            "pl-8",
+            "pr-4",
+            "py-1.5",
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "text-body-sm",
+            "font-body-sm",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "w-48"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Last, First Middle",
+          "placeholder": "Last, First Middle",
+          "name": "",
+          "classes": [
+            "w-full",
+            "px-3",
+            "py-2",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "date",
+          "label": "date",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "pl-3",
+            "pr-10",
+            "py-2",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-colors",
+            "appearance-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "pl-3",
+            "pr-10",
+            "py-2",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-colors",
+            "appearance-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "Primary complaint or objective...",
+          "placeholder": "Primary complaint or objective...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "px-3",
+            "py-2",
+            "bg-error-container/10",
+            "border-2",
+            "border-error",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-error",
+            "focus:ring-1",
+            "focus:ring-error",
+            "transition-colors",
+            "resize-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "tel",
+          "label": "(XXX) XXX-XXXX",
+          "placeholder": "(XXX) XXX-XXXX",
+          "name": "",
+          "classes": [
+            "w-full",
+            "pl-10",
+            "pr-3",
+            "py-2",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "email",
+          "label": "patient@domain.com",
+          "placeholder": "patient@domain.com",
+          "name": "",
+          "classes": [
+            "w-full",
+            "pl-10",
+            "pr-3",
+            "py-2",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "queue",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "local_hospital",
+        "dashboard",
+        "edit_note",
+        "queue",
+        "analytics",
+        "settings",
+        "help",
+        "logout",
+        "folder_open",
+        "chevron_right",
+        "search",
+        "notifications",
+        "sync_problem",
+        "person",
+        "calendar_month",
+        "expand_more",
+        "clinical_notes",
+        "error",
+        "info",
+        "contact_phone",
+        "call",
+        "mail",
+        "save"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAIVfN0vemgKV_cbplyFQ6UBTv5ipUiKIGYVamco_3B_8WS8foDX59p34yhlCGPc_Jqo1dthoPrtaeN1qrCCjFj0zjK4WkQmxdr1gV36qJ7kULSsW5JvYVwozOvh4TDYzVMxpFbqtetICEUYyh8g2",
+          "alt": "User Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f0f1f2",
+        "surface-bright": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "on-tertiary-fixed": "#291802",
+        "surface-container-highest": "#e1e3e4",
+        "secondary": "#006a63",
+        "on-surface": "#191c1d",
+        "primary-fixed": "#d1e4fb",
+        "inverse-surface": "#2e3132",
+        "surface-dim": "#d9dadb",
+        "on-primary-container": "#96a9be",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#00504a",
+        "secondary-fixed-dim": "#71d7cd",
+        "on-background": "#191c1d",
+        "tertiary": "#362308",
+        "on-secondary": "#ffffff",
+        "secondary-fixed": "#8ef4e9",
+        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed": "#091d2e",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#b5c8df",
+        "primary-container": "#2c3e50",
+        "surface-container-high": "#e7e8e9",
+        "tertiary-container": "#4e381c",
+        "outline": "#74777d",
+        "surface-tint": "#4e6073",
+        "secondary-container": "#8bf1e6",
+        "surface-variant": "#e1e3e4",
+        "tertiary-fixed-dim": "#e3c19b",
+        "outline-variant": "#c4c6cd",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#006f67",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "background": "#f8f9fa",
+        "primary": "#162839",
+        "inverse-primary": "#b5c8df",
+        "on-surface-variant": "#43474c",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#c1a17d",
+        "on-secondary-fixed": "#00201d",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f4f5",
+        "surface": "#f8f9fa",
+        "tertiary-fixed": "#ffddb7",
+        "priority-critical": "#ba1a1a",
+        "priority-high": "#e3c19b",
+        "priority-normal": "#71d7cd"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Patient",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "local_hospital",
+          "icon": "local_hospital",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Quick search...",
+          "type": "text",
+          "placeholder": "Quick search...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "Last, First Middle",
+          "type": "text",
+          "placeholder": "Last, First Middle",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "date",
+          "type": "date",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "Primary complaint or objective...",
+          "type": "textarea",
+          "placeholder": "Primary complaint or objective...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "(XXX) XXX-XXXX",
+          "type": "tel",
+          "placeholder": "(XXX) XXX-XXXX",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "patient@domain.com",
+          "type": "email",
+          "placeholder": "patient@domain.com",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "local_hospital",
+          "icon": "local_hospital",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Patient Editor - ClinicFlow Command"
+    },
+    "56b1a25c720e4709ab390eeb1c086283": {
+      "screenId": "56b1a25c720e4709ab390eeb1c086283",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "h-full",
+            "w-[240px]",
+            "left-0",
+            "top-0",
+            "bg-primary",
+            "border-r",
+            "border-outline-variant",
+            "flex",
+            "flex-col"
+          ],
+          "childCount": 10
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "h-[56px]",
+            "w-[calc(100%-240px)]",
+            "bg-surface",
+            "border-b",
+            "border-outline-variant",
+            "flex",
+            "items-center"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "ml-[240px]",
+            "mt-[56px]",
+            "p-container-padding",
+            "min-h-[calc(100vh-56px)]",
+            "bg-background"
+          ],
+          "childCount": 15
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "hover:text-primary",
+            "transition-colors",
+            "p-1",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded-full",
+            "hover:bg-surface-container-high"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Retry Connection",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "font-label-md",
+            "text-label-md",
+            "px-6",
+            "py-2.5",
+            "rounded-lg",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Technical Details",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "text-on-surface-variant",
+            "font-label-sm",
+            "text-label-sm",
+            "py-2",
+            "border-b",
+            "border-outline-variant/50",
+            "hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "expand_more",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Clear All Filters",
+          "classes": [
+            "border",
+            "border-outline-variant",
+            "text-primary",
+            "font-label-md",
+            "text-label-md",
+            "px-6",
+            "py-2.5",
+            "rounded-lg",
+            "hover:bg-surface-container-low",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Create First Patient Record",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "font-label-md",
+            "text-label-md",
+            "px-6",
+            "py-2.5",
+            "rounded-lg",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Import CSV Data",
+          "classes": [
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "px-6",
+            "py-2.5",
+            "rounded-lg",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "queue",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "edit_note",
+        "queue",
+        "analytics",
+        "settings",
+        "help",
+        "logout",
+        "notifications",
+        "person",
+        "cloud_off",
+        "refresh",
+        "expand_more",
+        "filter_list_off",
+        "close",
+        "person_add",
+        "add"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f0f1f2",
+        "surface-bright": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "on-tertiary-fixed": "#291802",
+        "surface-container-highest": "#e1e3e4",
+        "secondary": "#006a63",
+        "on-surface": "#191c1d",
+        "primary-fixed": "#d1e4fb",
+        "inverse-surface": "#2e3132",
+        "surface-dim": "#d9dadb",
+        "on-primary-container": "#96a9be",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#00504a",
+        "secondary-fixed-dim": "#71d7cd",
+        "on-background": "#191c1d",
+        "tertiary": "#362308",
+        "on-secondary": "#ffffff",
+        "secondary-fixed": "#8ef4e9",
+        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed": "#091d2e",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#b5c8df",
+        "primary-container": "#2c3e50",
+        "surface-container-high": "#e7e8e9",
+        "tertiary-container": "#4e381c",
+        "outline": "#74777d",
+        "surface-tint": "#4e6073",
+        "secondary-container": "#8bf1e6",
+        "surface-variant": "#e1e3e4",
+        "tertiary-fixed-dim": "#e3c19b",
+        "outline-variant": "#c4c6cd",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#006f67",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "background": "#f8f9fa",
+        "primary": "#162839",
+        "inverse-primary": "#b5c8df",
+        "on-surface-variant": "#43474c",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#c1a17d",
+        "on-secondary-fixed": "#00201d",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f4f5",
+        "surface": "#f8f9fa",
+        "tertiary-fixed": "#ffddb7",
+        "priority-critical": "#ba1a1a",
+        "priority-high": "#e3c19b",
+        "priority-normal": "#71d7cd"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "2"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Connection",
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Technical Details",
+          "icon": "expand_more",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Clear All Filters",
+          "icon": null,
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Create First Patient Record",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Import CSV Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Empty and Error Recovery - ClinicFlow Command"
+    },
+    "975a3ae4e5694d8daa52d43c51748413": {
+      "screenId": "975a3ae4e5694d8daa52d43c51748413",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "aside",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "h-full",
+            "w-[240px]",
+            "left-0",
+            "top-0",
+            "bg-primary",
+            "dark:bg-primary",
+            "border-r",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "h-[56px]",
+            "w-[calc(100%-240px)]",
+            "bg-surface",
+            "dark:bg-surface",
+            "border-b",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "mt-[56px]",
+            "p-container-padding",
+            "overflow-y-auto"
+          ],
+          "childCount": 53
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "w-8",
+            "h-8",
+            "rounded-full",
+            "hover:bg-surface-container-highest",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "transition-colors",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Create Patient",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "px-4",
+            "py-2",
+            "rounded-DEFAULT",
+            "font-label-md",
+            "text-label-md",
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "shadow-sm"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "edit",
+          "classes": [
+            "opacity-0",
+            "group-hover:opacity-100",
+            "p-1",
+            "rounded",
+            "hover:bg-surface-container",
+            "text-on-surface-variant",
+            "transition-all"
+          ],
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Connection",
+          "classes": [
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "px-4",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-surface-container",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Add First Patient",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "px-4",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-primary/90",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "classes": [
+            "p-1",
+            "rounded",
+            "hover:bg-surface-container",
+            "text-on-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "View Chart",
+          "classes": [
+            "flex-1",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-surface-container",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Update Status",
+          "classes": [
+            "flex-1",
+            "bg-secondary",
+            "text-on-secondary",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-secondary/90",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search patients, IDs, or staff...",
+          "placeholder": "Search patients, IDs, or staff...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "pl-9",
+            "pr-4",
+            "py-1.5",
+            "bg-surface-container",
+            "rounded-DEFAULT",
+            "border-none",
+            "text-body-sm",
+            "font-body-sm",
+            "text-on-surface",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "placeholder:text-on-surface-variant/60"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "text-body-sm",
+            "font-body-sm",
+            "text-on-surface",
+            "focus:ring-0",
+            "py-1",
+            "pl-2",
+            "pr-8",
+            "rounded",
+            "cursor-pointer",
+            "hover:bg-surface-container"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "queue",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "edit_note",
+        "queue",
+        "analytics",
+        "settings",
+        "help",
+        "logout",
+        "search",
+        "notifications",
+        "add",
+        "filter_list",
+        "edit",
+        "folder_off",
+        "close"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f0f1f2",
+        "surface-bright": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "on-tertiary-fixed": "#291802",
+        "surface-container-highest": "#e1e3e4",
+        "secondary": "#006a63",
+        "on-surface": "#191c1d",
+        "primary-fixed": "#d1e4fb",
+        "inverse-surface": "#2e3132",
+        "surface-dim": "#d9dadb",
+        "on-primary-container": "#96a9be",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#00504a",
+        "secondary-fixed-dim": "#71d7cd",
+        "on-background": "#191c1d",
+        "tertiary": "#362308",
+        "on-secondary": "#ffffff",
+        "secondary-fixed": "#8ef4e9",
+        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed": "#091d2e",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#b5c8df",
+        "primary-container": "#2c3e50",
+        "surface-container-high": "#e7e8e9",
+        "tertiary-container": "#4e381c",
+        "outline": "#74777d",
+        "surface-tint": "#4e6073",
+        "secondary-container": "#8bf1e6",
+        "surface-variant": "#e1e3e4",
+        "tertiary-fixed-dim": "#e3c19b",
+        "outline-variant": "#c4c6cd",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#006f67",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "background": "#f8f9fa",
+        "primary": "#162839",
+        "inverse-primary": "#b5c8df",
+        "on-surface-variant": "#43474c",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#c1a17d",
+        "on-secondary-fixed": "#00201d",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f4f5",
+        "surface": "#f8f9fa",
+        "tertiary-fixed": "#ffddb7",
+        "priority-critical": "#ba1a1a",
+        "priority-high": "#e3c19b",
+        "priority-normal": "#71d7cd"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 4,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Create Patient",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "edit",
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Connection",
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Add First Patient",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "View Chart",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Update Status",
+          "icon": null,
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "input",
+          "label": "Search patients, IDs, or staff...",
+          "type": "text",
+          "placeholder": "Search patients, IDs, or staff...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Patient Operations - ClinicFlow Command"
+    },
+    "9b507a993d16472ebe91bfeb247425e5": {
+      "screenId": "9b507a993d16472ebe91bfeb247425e5",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "h-full",
+            "w-[240px]",
+            "left-0",
+            "top-0",
+            "bg-primary",
+            "border-r",
+            "border-outline-variant",
+            "flex",
+            "flex-col"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "h-[56px]",
+            "w-[calc(100%-240px)]",
+            "bg-surface",
+            "border-b",
+            "border-outline-variant",
+            "flex",
+            "items-center"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "ml-[240px]",
+            "pt-[56px]",
+            "p-container-padding"
+          ],
+          "childCount": 47
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "w-8",
+            "h-8",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-all",
+            "duration-200",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "h-9",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "bg-surface-container-lowest",
+            "text-on-surface",
+            "hover:bg-surface-container-low",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export Summary",
+          "classes": [
+            "h-9",
+            "px-4",
+            "rounded",
+            "bg-primary",
+            "text-on-primary",
+            "hover:opacity-90",
+            "transition-opacity",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Consider opening Triage Lane 3",
+          "classes": [
+            "w-full",
+            "h-8",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "font-label-md",
+            "text-label-md",
+            "text-on-surface",
+            "hover:bg-surface-container-low",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View All",
+          "classes": [
+            "text-secondary",
+            "font-label-md",
+            "text-label-md",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "medical_services",
+          "classes": [],
+          "icon": "medical_services",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search operations...",
+          "placeholder": "Search operations...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-8",
+            "pl-10",
+            "pr-3",
+            "rounded",
+            "bg-surface-container-low",
+            "border-none",
+            "text-body-sm",
+            "font-body-sm",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "focus:bg-surface-container-lowest",
+            "transition-colors",
+            "placeholder:text-on-surface-variant/70"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "queue",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "medical_services",
+        "dashboard",
+        "edit_note",
+        "queue",
+        "analytics",
+        "settings",
+        "help",
+        "logout",
+        "search",
+        "notifications",
+        "filter_list",
+        "download",
+        "trending_up",
+        "groups",
+        "update",
+        "star",
+        "lightbulb",
+        "check",
+        "warning",
+        "login",
+        "cleaning_services"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f0f1f2",
+        "surface-bright": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "on-tertiary-fixed": "#291802",
+        "surface-container-highest": "#e1e3e4",
+        "secondary": "#006a63",
+        "on-surface": "#191c1d",
+        "primary-fixed": "#d1e4fb",
+        "inverse-surface": "#2e3132",
+        "surface-dim": "#d9dadb",
+        "on-primary-container": "#96a9be",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#00504a",
+        "secondary-fixed-dim": "#71d7cd",
+        "on-background": "#191c1d",
+        "tertiary": "#362308",
+        "on-secondary": "#ffffff",
+        "secondary-fixed": "#8ef4e9",
+        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed": "#091d2e",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#b5c8df",
+        "primary-container": "#2c3e50",
+        "surface-container-high": "#e7e8e9",
+        "tertiary-container": "#4e381c",
+        "outline": "#74777d",
+        "surface-tint": "#4e6073",
+        "secondary-container": "#8bf1e6",
+        "surface-variant": "#e1e3e4",
+        "tertiary-fixed-dim": "#e3c19b",
+        "outline-variant": "#c4c6cd",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#006f67",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "background": "#f8f9fa",
+        "primary": "#162839",
+        "inverse-primary": "#b5c8df",
+        "on-surface-variant": "#43474c",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#c1a17d",
+        "on-secondary-fixed": "#00201d",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f4f5",
+        "surface": "#f8f9fa",
+        "tertiary-fixed": "#ffddb7",
+        "priority-critical": "#ba1a1a",
+        "priority-high": "#e3c19b",
+        "priority-normal": "#71d7cd"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 4,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export Summary",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Consider opening Triage Lane 3",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View All",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "medical_services",
+          "icon": "medical_services",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search operations...",
+          "type": "text",
+          "placeholder": "Search operations...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "medical_services",
+          "icon": "medical_services",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Insights - ClinicFlow Command"
+    },
+    "e6a1668d26de47bd96135042dd850c2b": {
+      "screenId": "e6a1668d26de47bd96135042dd850c2b",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "font-body-md",
+            "text-body-md",
+            "fixed",
+            "h-full",
+            "w-[240px]",
+            "left-0",
+            "top-0",
+            "border-r"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "absolute",
+          "classes": [
+            "bg-surface",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "fixed",
+            "top-0",
+            "right-0",
+            "h-[56px]",
+            "w-[calc(100%-240px)]",
+            "border-b"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "mt-[56px]",
+            "p-container-padding",
+            "overflow-x-auto",
+            "overflow-y-hidden",
+            "custom-scrollbar",
+            "bg-surface-bright"
+          ],
+          "childCount": 37
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "relative",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-all",
+            "duration-200"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "px-3",
+            "py-1.5",
+            "bg-surface",
+            "text-on-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-1"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "sort",
+          "classes": [
+            "px-3",
+            "py-1.5",
+            "bg-surface",
+            "text-on-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "font-label-md",
+            "text-label-md",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-1"
+          ],
+          "icon": "sort",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Assign Room",
+          "classes": [
+            "w-full",
+            "mt-2",
+            "py-1.5",
+            "bg-surface-container",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "rounded",
+            "border",
+            "border-outline-variant",
+            "hover:bg-secondary",
+            "hover:text-on-secondary",
+            "hover:border-secondary",
+            "transition-colors",
+            "opacity-0",
+            "group-hover:opacity-100"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Room 3",
+          "classes": [
+            "w-full",
+            "mt-2",
+            "py-1.5",
+            "bg-primary",
+            "text-on-primary",
+            "font-label-md",
+            "text-label-md",
+            "rounded",
+            "border",
+            "border-primary",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "opacity-0",
+            "group-hover:opacity-100"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search patients, providers...",
+          "placeholder": "Search patients, providers...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "py-1.5",
+            "pl-9",
+            "pr-3",
+            "font-body-sm",
+            "text-body-sm",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "text-on-surface"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "queue",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "edit_note",
+        "queue",
+        "analytics",
+        "settings",
+        "help",
+        "logout",
+        "search",
+        "notifications",
+        "filter_list",
+        "sort",
+        "error",
+        "schedule"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB_sBjhLWqB_W_qcDhcypZGwpOOcWPxAruAeCrNkmmkMkaOUt7J1rpaLfP_JR8VtH6QAisz6snGl3JEFzX7nyv1bKB60VRoqai6gq7c33NkE-4HhrT7Vw2JRP20ZXCBkRRq_RkTZwode3_bFm36a8",
+          "alt": "ClinicFlow Logo"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAinFITPnNy3B5t8Jg260DbbdlaAHg1469wzlZwYZhUXoMoKNUZeD3Vr40bg8TdP78MjH_IyBUXyOTNaSPyw_7pV6t_lJUQ4OhCmbrchCro2unjv2Gff6Z7yutdF7jokm7TrNIUaMyS8vmveu2klY",
+          "alt": "User Profile"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB8DtmoRn3YvMpNqPJ5qx8SiZy_42VbA9KNF0KFGCf4eU1ZxdSTvvHQHrPra9usnT8-mUvBvSZJWffJ_Ko6ggkEuPQP4DEbDTx3dq8_HEi-CgMaexHlRo-cw5PK9qaUCXyLlsxFEqsd4mTjoNjpHi",
+          "alt": "Provider"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-on-surface": "#f0f1f2",
+        "surface-bright": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "on-tertiary-fixed": "#291802",
+        "surface-container-highest": "#e1e3e4",
+        "secondary": "#006a63",
+        "on-surface": "#191c1d",
+        "primary-fixed": "#d1e4fb",
+        "inverse-surface": "#2e3132",
+        "surface-dim": "#d9dadb",
+        "on-primary-container": "#96a9be",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#00504a",
+        "secondary-fixed-dim": "#71d7cd",
+        "on-background": "#191c1d",
+        "tertiary": "#362308",
+        "on-secondary": "#ffffff",
+        "secondary-fixed": "#8ef4e9",
+        "on-primary-fixed-variant": "#36485b",
+        "on-primary-fixed": "#091d2e",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#b5c8df",
+        "primary-container": "#2c3e50",
+        "surface-container-high": "#e7e8e9",
+        "tertiary-container": "#4e381c",
+        "outline": "#74777d",
+        "surface-tint": "#4e6073",
+        "secondary-container": "#8bf1e6",
+        "surface-variant": "#e1e3e4",
+        "tertiary-fixed-dim": "#e3c19b",
+        "outline-variant": "#c4c6cd",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#006f67",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "background": "#f8f9fa",
+        "primary": "#162839",
+        "inverse-primary": "#b5c8df",
+        "on-surface-variant": "#43474c",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#c1a17d",
+        "on-secondary-fixed": "#00201d",
+        "error": "#ba1a1a",
+        "surface-container-low": "#f3f4f5",
+        "surface": "#f8f9fa",
+        "tertiary-fixed": "#ffddb7",
+        "priority-critical": "#ba1a1a",
+        "priority-high": "#e3c19b",
+        "priority-normal": "#71d7cd"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "sort",
+          "icon": "sort",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Assign Room",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Room 3",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search patients, providers...",
+          "type": "text",
+          "placeholder": "Search patients, providers...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ClinicFlow Command Medical Operations",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "queue",
+          "icon": "queue",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "logout",
+          "icon": "logout",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Queue and Status Management - ClinicFlow Command"
+    }
+  }
+}
