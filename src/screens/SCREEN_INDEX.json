@@ -1,0 +1,584 @@
+[
+  {
+    "screenId": "9b507a993d16472ebe91bfeb247425e5",
+    "title": "Insights - ClinicFlow Command",
+    "componentName": "InsightsClinicflowCommand",
+    "file": "src/screens/InsightsClinicflowCommand.tsx",
+    "buttons": 5,
+    "inputs": 1,
+    "links": 7,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "filter-2",
+        "kind": "button",
+        "label": "Filter",
+        "index": 1
+      },
+      {
+        "id": "export-summary-3",
+        "kind": "button",
+        "label": "Export Summary",
+        "index": 2
+      },
+      {
+        "id": "consider-opening-triage-lane-3-4",
+        "kind": "button",
+        "label": "Consider opening Triage Lane 3",
+        "index": 3
+      },
+      {
+        "id": "view-all-5",
+        "kind": "button",
+        "label": "View All",
+        "index": 4
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "queue-3",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "insights-4",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "help-6",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "logout-7",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  },
+  {
+    "screenId": "e6a1668d26de47bd96135042dd850c2b",
+    "title": "Queue and Status Management - ClinicFlow Command",
+    "componentName": "QueueAndStatusManagementClinicflowCommand",
+    "file": "src/screens/QueueAndStatusManagementClinicflowCommand.tsx",
+    "buttons": 5,
+    "inputs": 1,
+    "links": 7,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "filter-2",
+        "kind": "button",
+        "label": "Filter",
+        "index": 1
+      },
+      {
+        "id": "sort-3",
+        "kind": "button",
+        "label": "Sort",
+        "index": 2
+      },
+      {
+        "id": "assign-room-4",
+        "kind": "button",
+        "label": "Assign Room",
+        "index": 3
+      },
+      {
+        "id": "room-3-5",
+        "kind": "button",
+        "label": "Room 3",
+        "index": 4
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "queue-3",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "insights-4",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "help-6",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "logout-7",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  },
+  {
+    "screenId": "03232aeab91d44548714ed9c13e7ff49",
+    "title": "Settings and Preferences - ClinicFlow Command",
+    "componentName": "SettingsAndPreferencesClinicflowCommand",
+    "file": "src/screens/SettingsAndPreferencesClinicflowCommand.tsx",
+    "buttons": 8,
+    "inputs": 5,
+    "links": 7,
+    "actions": [
+      {
+        "id": "search-1",
+        "kind": "button",
+        "label": "Search",
+        "index": 0
+      },
+      {
+        "id": "notifications-2",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 1
+      },
+      {
+        "id": "reset-to-defaults-3",
+        "kind": "button",
+        "label": "Reset to Defaults",
+        "index": 2
+      },
+      {
+        "id": "delete-filter-4",
+        "kind": "button",
+        "label": "Delete Filter",
+        "index": 3
+      },
+      {
+        "id": "delete-filter-5",
+        "kind": "button",
+        "label": "Delete Filter",
+        "index": 4
+      },
+      {
+        "id": "delete-filter-6",
+        "kind": "button",
+        "label": "Delete Filter",
+        "index": 5
+      },
+      {
+        "id": "retry-load-7",
+        "kind": "button",
+        "label": "Retry Load",
+        "index": 6
+      },
+      {
+        "id": "save-preferences-8",
+        "kind": "button",
+        "label": "Save Preferences",
+        "index": 7
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "queue-3",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "insights-4",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "help-6",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "logout-7",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  },
+  {
+    "screenId": "25b859a82d7e4be5b03cd0b201b161b2",
+    "title": "Patient Editor - ClinicFlow Command",
+    "componentName": "PatientEditorClinicflowCommand",
+    "file": "src/screens/PatientEditorClinicflowCommand.tsx",
+    "buttons": 3,
+    "inputs": 5,
+    "links": 7,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "cancel-2",
+        "kind": "button",
+        "label": "Cancel",
+        "index": 1
+      },
+      {
+        "id": "save-patient-3",
+        "kind": "button",
+        "label": "Save Patient",
+        "index": 2
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "queue-3",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "insights-4",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "help-6",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "logout-7",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  },
+  {
+    "screenId": "975a3ae4e5694d8daa52d43c51748413",
+    "title": "Patient Operations - ClinicFlow Command",
+    "componentName": "PatientOperationsClinicflowCommand",
+    "file": "src/screens/PatientOperationsClinicflowCommand.tsx",
+    "buttons": 10,
+    "inputs": 1,
+    "links": 7,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "create-patient-2",
+        "kind": "button",
+        "label": "Create Patient",
+        "index": 1
+      },
+      {
+        "id": "edit-3",
+        "kind": "button",
+        "label": "Edit",
+        "index": 2
+      },
+      {
+        "id": "edit-4",
+        "kind": "button",
+        "label": "Edit",
+        "index": 3
+      },
+      {
+        "id": "edit-5",
+        "kind": "button",
+        "label": "Edit",
+        "index": 4
+      },
+      {
+        "id": "retry-connection-6",
+        "kind": "button",
+        "label": "Retry Connection",
+        "index": 5
+      },
+      {
+        "id": "add-first-patient-7",
+        "kind": "button",
+        "label": "Add First Patient",
+        "index": 6
+      },
+      {
+        "id": "close-8",
+        "kind": "button",
+        "label": "Close",
+        "index": 7
+      },
+      {
+        "id": "view-chart-9",
+        "kind": "button",
+        "label": "View Chart",
+        "index": 8
+      },
+      {
+        "id": "update-status-10",
+        "kind": "button",
+        "label": "Update Status",
+        "index": 9
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "queue-3",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "insights-4",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "help-6",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "logout-7",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  },
+  {
+    "screenId": "56b1a25c720e4709ab390eeb1c086283",
+    "title": "Empty and Error Recovery - ClinicFlow Command",
+    "componentName": "EmptyAndErrorRecoveryClinicflowCommand",
+    "file": "src/screens/EmptyAndErrorRecoveryClinicflowCommand.tsx",
+    "buttons": 6,
+    "inputs": 0,
+    "links": 7,
+    "actions": [
+      {
+        "id": "notifications-1",
+        "kind": "button",
+        "label": "Notifications",
+        "index": 0
+      },
+      {
+        "id": "retry-connection-2",
+        "kind": "button",
+        "label": "Retry Connection",
+        "index": 1
+      },
+      {
+        "id": "technical-details-3",
+        "kind": "button",
+        "label": "Technical Details",
+        "index": 2
+      },
+      {
+        "id": "clear-all-filters-4",
+        "kind": "button",
+        "label": "Clear All Filters",
+        "index": 3
+      },
+      {
+        "id": "create-first-patient-record-5",
+        "kind": "button",
+        "label": "Create First Patient Record",
+        "index": 4
+      },
+      {
+        "id": "import-csv-data-6",
+        "kind": "button",
+        "label": "Import CSV Data",
+        "index": 5
+      },
+      {
+        "id": "operations-1",
+        "kind": "link",
+        "label": "Operations",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "editor-2",
+        "kind": "link",
+        "label": "Editor",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "queue-3",
+        "kind": "link",
+        "label": "Queue",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "insights-4",
+        "kind": "link",
+        "label": "Insights",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "Settings",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "help-6",
+        "kind": "link",
+        "label": "Help",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "logout-7",
+        "kind": "link",
+        "label": "Logout",
+        "href": "#",
+        "index": 6
+      }
+    ]
+  }
+]
